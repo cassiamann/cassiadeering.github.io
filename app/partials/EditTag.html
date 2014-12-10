@@ -1,0 +1,35 @@
+<div class="container">
+
+	<div class="row">
+		<div class="col-md-3"></div>
+		<div class="col-md-6">
+			<p>ID: {{transaction._id}}</p>
+			<p>Amount: {{transaction.amount}}</p>
+			<p>Date: {{transaction.details.date}}</p>
+			<p>Tag: {{transaction.tags}}</p>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-3"></div>
+			<div class="col-md-6">
+			<div class="input-group">
+				<span class="input-group-addon">new tag</span>
+				<input type="text" class="form-control" placeholder="" ng-model="tag" ng-change="result = ''">
+			</div>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-8"></div>
+		<div class="col-md-2">
+			<button type="button" class="btn btn-default" ng-click="ChangeTag()">Submit</button>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="alert alert-success" role="alert" ng-show="result == 'success'">Successfully updated tag!</div>
+		<div class="alert alert-danger" role="alert" ng-show="result == 'error'">Failed to update</div>
+	</div>
+
+</div>

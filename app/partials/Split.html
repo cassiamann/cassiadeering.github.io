@@ -1,0 +1,74 @@
+<div id="second-container">
+    <div id="sub-container-2">
+    <div class="row">
+
+
+
+        <div class="my-form"> 
+        <form>
+            <div class="container">
+        <div class="row">
+            <div class="col-xs-1"> <h5>Amount 1:</h5>
+            </div>
+            <div class="col-xs-5">
+                <div class="input-group">
+                    <div class="input-group-btn">
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">{{tag1}}<span class="caret"></span></button>
+                        <ul class="dropdown-menu">
+                          <li ng-repeat-start="tag in tags"></li>
+                            <li><a ng-click="$parent.tag1=tag">{{tag}}</a></li>
+                            <li ng-repeat-end></li>
+                            <li class="divider"></li>
+                             <li><a><span class="glyphicon glyphicon-plus"></span>  Add a category</a></li>
+                        </ul>
+                    </div>
+                    <input type="text" class="form-control" ng-change="Balance1()" ng-model="Amount1" placeholder="{{transaction_amount}}">
+                </div>
+            </div>
+            <div class="col-xs-1"> <h5>Amount 2:</h5>
+            </div>
+            <div class="col-xs-5">
+                <div class="input-group">
+                    <div class="input-group-btn">
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">{{tag2}}<span class="caret"></span></button>
+                        <ul class="dropdown-menu">
+                          <li ng-repeat-start="tag in tags"></li>
+                            <li><a ng-click="$parent.tag2=tag">{{tag}}</a></li>
+                            <li ng-repeat-end></li>
+                            <li class="divider"></li>
+                            <li><a href="#"><span class="glyphicon glyphicon-plus"></span>  Add a category</a></li>
+                            
+                        </ul>
+                    </div>
+                    <input type="text" class="form-control" ng-change="Balance2()" ng-model="Amount2" placeholder="{{transaction_amount}}">
+                </div>
+            </div>
+            <div class="col-xs-1"> 
+            </div>
+        </div>
+
+    <br />
+    <div class="row">
+      <div class="col-sm-5"></div>
+
+      <div class="btn-group btn-group-lg" data-toggle="buttons">
+        <div class="btn-group">
+          <button type="button" ng-click="SubmitSplit()" class="btn btn-primary">Split!</button>
+          <button type="button" ng-click="GoTo('/Home')" class="btn btn-primary">Cancel</button>
+        </div>
+      </div>
+
+    </div> 
+
+
+
+
+</div>
+
+    </form></div>
+    </div>
+  </div>
+  </div>
+
+
+
